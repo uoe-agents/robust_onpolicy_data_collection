@@ -1,7 +1,5 @@
 # Robust On-Policy Data Collection for Data Efficient Policy Evaluation
 
-## Introduction
-
 Source code of Robust On-Policy Data Collection for Data Efficient Policy Evaluation (NeurIPS 2021 Workshop on OfflineRL).
 
 The code is written in python 3, using Pytorch for the implementation of the deep networks and OpenAI gym for the experiment domains.
