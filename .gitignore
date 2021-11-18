@@ -1,0 +1,10 @@
+.*
+__pycache__
+others
+results*/
+log/
+writing_*/
+debug
+dice
+eddie
+submission_*/
