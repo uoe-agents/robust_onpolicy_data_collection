@@ -1,6 +1,6 @@
 # Robust On-Policy Data Collection for Data Efficient Policy Evaluation
 
-Source code of Robust On-Policy Data Collection for Data Efficient Policy Evaluation (NeurIPS 2021 Workshop on OfflineRL).
+Source code of [Robust On-Policy Data Collection for Data-Efficient Policy Evaluation](https://arxiv.org/pdf/2111.14552.pdf) (NeurIPS 2021 Workshop on OfflineRL).
 
 The code is written in python 3, using Pytorch for the implementation of the deep networks and OpenAI gym for the experiment domains.
 
@@ -66,7 +66,7 @@ To conduct policy evaluation with off-policy data, you need to add the following
 
 If you can use `qsub` or `sbatch`, you may only need to run the script `jobs/jobs.py` where all experiments in the paper are arranged. The log will be saved in ``log/`` and the seed results will be saved in ``results/seeds``. Note that we save the data collection cache in ``results/data`` and re-use it for different value estimations. To merge results of different seeds, run `experiments/merge_results.py`, and the merged results will be saved in ``results/``.
 
-## Drawing
+## Ploting
 
 When the experiments are finished, all the figures in the paper are produced by running
 
@@ -76,6 +76,15 @@ python drawing/draw.py
 
 ## Citing
 
+If you use this repository in your work, please consider citing the
+
 ```bibtex
-TODO
+@misc{zhong2021robust,
+      title={Robust On-Policy Data Collection for Data-Efficient Policy Evaluation}, 
+      author={Rujie Zhong and Josiah P. Hanna and Lukas Schäfer and Stefano V. Albrecht},
+      year={2021},
+      eprint={2111.14552},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
