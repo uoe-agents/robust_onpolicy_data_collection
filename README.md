@@ -1,4 +1,4 @@
-# Robust On-Policy Data Collection for Data Efficient Policy Evaluation
+# Robust On-Policy Data Collection for Data-Efficient Policy Evaluation
 
 Source code of [Robust On-Policy Data Collection for Data-Efficient Policy Evaluation](https://arxiv.org/pdf/2111.14552.pdf) (NeurIPS 2021 Workshop on OfflineRL).
 
@@ -76,7 +76,7 @@ python drawing/draw.py
 
 ## Citing
 
-If you use this repository in your work, please consider citing the
+If you use this repository in your work, please consider citing the paper
 
 ```bibtex
 %@misc{zhong2021robust,
