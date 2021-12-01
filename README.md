@@ -79,12 +79,18 @@ python drawing/draw.py
 If you use this repository in your work, please consider citing the
 
 ```bibtex
-@misc{zhong2021robust,
-      title={Robust On-Policy Data Collection for Data-Efficient Policy Evaluation}, 
-      author={Rujie Zhong and Josiah P. Hanna and Lukas Schäfer and Stefano V. Albrecht},
-      year={2021},
-      eprint={2111.14552},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+%@misc{zhong2021robust,
+%      title={Robust On-Policy Data Collection for Data-Efficient Policy Evaluation}, 
+%      author={Rujie Zhong and Josiah P. Hanna and Lukas Schäfer and Stefano V. Albrecht},
+%      year={2021},
+%      eprint={2111.14552},
+%      archivePrefix={arXiv},
+%      primaryClass={cs.LG}
+%}
+@inproceedings{zhong2021robust,
+    title = {Robust On-Policy Data Collection for Data-Efficient Policy Evaluation},
+    author = {Rujie Zhong, Josiah P. Hanna, Lukas Schäfer and Stefano V. Albrecht},
+    booktitle = {NeurIPS Workshop on Offline Reinforcement Learning (OfflineRL)},
+    year = {2021}
 }
 ```
