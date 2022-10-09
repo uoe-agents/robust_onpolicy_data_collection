@@ -1,8 +1,8 @@
-# Robust On-Policy Data Collection for Data-Efficient Policy Evaluation
+# Robust On-Policy Sampling for Data-Efficient Policy Evaluation in Reinforcement Learning
 
-Source code of [Robust On-Policy Data Collection for Data-Efficient Policy Evaluation](https://arxiv.org/pdf/2111.14552.pdf) (NeurIPS 2021 Workshop on OfflineRL).
+Source code of [Robust On-Policy Sampling for Data-Efficient Policy Evaluation in Reinforcement Learning](https://arxiv.org/pdf/2111.14552.pdf) (NeurIPS 2022).
 
-The code is written in python 3, using Pytorch for the implementation of the deep networks and OpenAI gym for the experiment domains.
+The code is written in Python 3, using PyTorch for the implementation of the deep networks and OpenAI gym for the experiment domains.
 
 ## Requirements
 
@@ -66,23 +66,33 @@ To conduct policy evaluation with off-policy data, you need to add the following
 
 If you can use `qsub` or `sbatch`, you may only need to run the script `jobs/jobs.py` where all experiments in the paper are arranged. The log will be saved in ``log/`` and the seed results will be saved in ``results/seeds``. Note that we save the data collection cache in ``results/data`` and re-use it for different value estimations. To merge results of different seeds, run `experiments/merge_results.py`, and the merged results will be saved in ``results/``.
 
-## Ploting
+## Data
 
-When the experiments are finished, all the figures in the paper are produced by running
+All experimental data used to generate plots of the paper can be found in ``data/`` with the following structure:
 
-```shell
-python drawing/draw.py
-```
+1. Subdirectories:
+
+     ``data/`` contains six subdirectories, out of which four (``bandit``, ``Gridworld``, ``Cartpole`` and ``con_cartpole``) contain results for each of the four domains. The other two subfolders (``Gridworld_ms`` and ``bandit_ms``) contain results for further experiments used to generate Figures like Figure 4c, d in the paper.
+
+2. File names:
+
+   The name of a file consists of four parts: domain, number of pre-trainings to get the     evaluation policy, sampling method and estimation method. For example, in the ``data/bandit`` folder, there is a file named ``MultiBandit_5000_BehaviorPolicyGradient1_OrdinaryImportanceSampling``. As for ``data/Gridworld_ms`` and ``data/bandit_ms``, file names contain ``ms`` referring to means and scale.
+
+
+## Plotting
+
+Code is provided to reproduce all the figures included in the paper. See the jupyter notebooks found in ``plotting/``.
+
 
 ## Citing
 
 If you use this repository in your work, please consider citing the paper
 
 ```bibtex
-@inproceedings{zhong2021robust,
-    title = {Robust On-Policy Data Collection for Data-Efficient Policy Evaluation},
-    author = {Rujie Zhong, Josiah P. Hanna, Lukas Schäfer and Stefano V. Albrecht},
-    booktitle = {NeurIPS Workshop on Offline Reinforcement Learning (OfflineRL)},
-    year = {2021}
+@inproceedings{zhong2022robust,
+    title = {Robust On-Policy Sampling for Data-Efficient Policy Evaluation in Reinforcement Learning},
+    author = {Rujie Zhong, Duohan Zhang, Lukas Sch\”afer, Stefano V. Albrecht, Josiah P. Hanna},
+    booktitle = {Advances in Neural Information Processing Systems},
+    year = {2022}
 }
 ```

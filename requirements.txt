@@ -1,5 +1,6 @@
 gym
 torch
 numpy
+seaborn
 matplotlib
 scipy
